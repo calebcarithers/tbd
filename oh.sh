@@ -1,6 +1,10 @@
 #!/bin/bash
 
-echo "whats it gonna be"
+
+for i in 1 2 3 4 5
+do
+	echo "make me a grilled cheese"
+done
 
 
 
