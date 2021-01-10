@@ -1,0 +1,53 @@
+<html>
+    <head>
+<!--        <style>-->
+<!--            #canvas {-->
+<!--                /*width: 100vw;*/-->
+<!--                /*height: 100vh;*/-->
+<!--                /*background: grey;*/-->
+<!--            }-->
+<!--        </style>-->
+        <script type="module">
+            const canvas = document.getElementById("canvas")
+
+            window.addEventListener("resize", function(e) {
+                console.log("RESIZE EVENT", e)
+                canvas.width = document.body.clientWidth; //document.width is obsolete
+                canvas.height = document.body.clientHeight; //document.height is obsolete
+            })
+
+            canvas.width = document.body.clientWidth; //document.width is obsolete
+            canvas.height = document.body.clientHeight; //document.height is obsolete
+
+            // canvas.width = 100000
+            // canvas.height = 100000
+
+            console.log("canvas", canvas)
+
+            if (canvas.getContext) {
+                var ctx = canvas.getContext("2d")
+            }
+
+            document.addEventListener("click", myFn)
+            function myFn(e) {
+                console.log("event", e)
+                const {x, y} = getMousePosition(canvas, e)
+                // console.log("x", x, "y", y)
+                ctx.fillRect(x, y, 10, 10);
+                // console.log(e.x, e.y)
+            }
+
+            function getMousePosition(canvas, event) {
+                let rect = canvas.getBoundingClientRect();
+                let x = event.clientX - rect.left;
+                let y = event.clientY - rect.top;
+                return {x, y}
+                console.log("Coordinate x: " + x,
+                    "Coordinate y: " + y);
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+    </body>
+</html>

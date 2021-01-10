@@ -1,19 +1,19 @@
-from flask import Flask
+from flask import Flask, request, jsonify
 app = Flask(__name__)
 
-@app.route("/update_data", methods=["POST"])
+@app.route("/position", methods=["POST"])
 def hello():
 	"""
-	Client sends position clicked
+	+Client sends position clicked
 	Generate random string
 	Send google api requests to get image
 	Store position, string, image url in DB
 	Return to all connected clients via WS
 	"""
-	return "hello"
+	body = request.json
 
-@app.route("/bitch")
-def haha():
-	return "oh nice"
+	return body
+
+
 
 
