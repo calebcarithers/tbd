@@ -1,4 +1,4 @@
-# tbd
-whats it gonna be
-we cant make grilled cheeses here
+# Rand click shit
+click to get a random image and word placed on the canvas
+explore what everyone else is doing yo.
 
