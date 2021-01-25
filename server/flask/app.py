@@ -16,7 +16,7 @@ def hello():
 
 @app.route("/test", methods=["GET"])
 def test():
-	return "test"
+	return jsonify({"test": "great"})
 
 
 
