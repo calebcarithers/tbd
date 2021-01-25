@@ -1,22 +1,14 @@
-from flask import Flask, request, render_template
-from google_images_search import GoogleImagesSearch
+from flask_rest.app import app
+from flask import request, jsonify, render_template
+from flask_rest.models import Clicks
 from random_word import RandomWords
-
-app = Flask(__name__, template_folder="/Users/imey/Desktop/tbd/client/")
-# params: Developer API KEY and then Search Engine ID or GCS_CX
-gis = GoogleImagesSearch('AIzaSyD4dQuHYxMAyGhJ4NOe3byXBK-SdWR6bkQ', 'e00b91f66e67f453c')
-
+import uuid
 
 def get_word():
     r = RandomWords()
     word = r.get_random_word()
     print(str(word))
     return str(word)
-
-
-
-
-@app.route("/position", methods=["GET", "POST"])
 
 
 def hello():
@@ -37,6 +29,7 @@ def hello():
     return "this is a GET request from positon"
 
 
+
 @app.route("/bitch", methods=["GET"])
 def pls():
     x = get_word()
@@ -51,6 +44,7 @@ def test():
 def initial():
     return render_template('index.html')
 
+
 # # list of random words to choose from
 # # define search params:
 # _search_params = {
@@ -61,3 +55,18 @@ def initial():
 # # this will search and download:
 # gis.search(search_params=_search_params, path_to_dir='/Users/imey/Desktop/tbd/client',custom_image_name='my_image')
 
+@app.route("/position/test", methods=["GET", "POST"])
+def pos_test():
+    if request.method == "POST":
+        x_pos = request.json.get("x_pos", None)
+        y_pos = request.json.get("y_pos", None)
+        if x_pos is None or y_pos is None:
+            return jsonify({"success": False, "message": "You must post an x and y pos"}), 400
+        else:
+            click = Clicks.create(
+                id = uuid.uuid4(),
+                x_pos = x_pos,
+                y_pos = y_pos,
+                image_url = "test.com"
+            )
+            return jsonify({"success": True})

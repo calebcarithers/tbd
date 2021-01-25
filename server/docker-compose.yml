@@ -1,12 +1,30 @@
 version: "3.9"
 services:
+
   flask:
-    build: ./flask
+    build: ./flask_rest
+    command: flask run
     ports:
       - '5000:5000'
     volumes:
-      - ./flask:/app
-    environment:
-      FLASK_APP: app.py
-      FLASK_RUN_HOST: 0.0.0.0
-      FLASK_ENV: development
+      - ./flask_rest:/app
+    env_file:
+      - ./local.env
+    depends_on:
+      - "postgres"
+
+  postgres:
+    build: ./postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/1-schema.sql
+    env_file:
+      - ./local.env
+
+  adminer:
+    image: adminer
+    ports:
+    - '8080:8080'
+    depends_on:
+      - "postgres"

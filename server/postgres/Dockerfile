@@ -1,4 +1,2 @@
-FROM postgres
-ENV POSTGRES_USER=postgres
-ENV POSTGRES_PASSWORD=test
-ENV POSTGRES_DB=test_db
+FROM postgres:13.1
+EXPOSE 5432
