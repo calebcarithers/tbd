@@ -1,5 +1,5 @@
 from peewee import Model, UUIDField, DecimalField, TextField
-from flask_rest.app import db
+from flask_rest import db
 
 class BaseModel(Model):
     class Meta:
