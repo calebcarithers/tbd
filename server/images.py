@@ -12,7 +12,7 @@ def get_word():
 
 
 # params: Developer API KEY and then Search Engine ID or GCS_CX
-gis = GoogleImagesSearch('AIzaSyD4dQuHYxMAyGhJ4NOe3byXBK-SdWR6bkQ', 'e00b91f66e67f453c')
+gis = GoogleImagesSearch('API KEY', 'GCS_Cx')
 
 # define search params:
 _search_params = {
