@@ -2,8 +2,19 @@ from flask import Flask
 from peewee import *
 from google_images_search import GoogleImagesSearch
 import os
+from flask import request
 
 app = Flask(__name__, template_folder="/Users/imey/Desktop/tbd/client/")
+@app.after_request
+def cors(response):
+    print("running")
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    if request.method == 'OPTIONS':
+        response.headers['Access-Control-Allow-Methods'] = 'DELETE, GET, POST, PUT'
+        headers = request.headers.get('Access-Control-Request-Headers')
+        if headers:
+            response.headers['Access-Control-Allow-Headers'] = headers
+    return response
 
 # params: Developer API KEY and then Search Engine ID or GCS_CX
 gis = GoogleImagesSearch(os.environ["GIS_API_KEY"], os.environ["GIS_CX"])

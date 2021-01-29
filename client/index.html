@@ -15,7 +15,13 @@
             document.addEventListener("click", function (e) {
                 const {x,y} = getMousePosition(canvas,e);
                 ctx.fillRect(x,y,10,10)
-
+                fetch("http://localhost:5000/position/test", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({x: x, y: y})
+                }).catch(e => console.log("error", e))
             });
 
             function getMousePosition(canvas, event) {

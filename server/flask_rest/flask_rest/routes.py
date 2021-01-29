@@ -61,6 +61,7 @@ def pos_test():
     if request.method == "POST":
         x_pos = request.json.get("x_pos", None)
         y_pos = request.json.get("y_pos", None)
+        print(f"xpos: {x_pos}")
         if x_pos is None or y_pos is None:
             return jsonify({"success": False, "message": "You must post an x and y pos"}), 400
         else:
@@ -70,4 +71,4 @@ def pos_test():
                 y_pos = y_pos,
                 image_url = "test.com"
             )
-            return jsonify({"success": True})
+            return jsonify({"success": True}), 200
