@@ -3,11 +3,13 @@ from peewee import *
 from google_images_search import GoogleImagesSearch
 import os
 from flask import request
+from random_word import RandomWords
+
 
 app = Flask(__name__, template_folder="/Users/imey/Desktop/tbd/client/")
+# add necessary headers for cors shit
 @app.after_request
 def cors(response):
-    print("running")
     response.headers['Access-Control-Allow-Origin'] = '*'
     if request.method == 'OPTIONS':
         response.headers['Access-Control-Allow-Methods'] = 'DELETE, GET, POST, PUT'
@@ -33,4 +35,7 @@ def before_request_handler():
 def after_request_handler():
     db.close()
 
+logger = app.logger
+
+random_word = RandomWords()
 import flask_rest.routes

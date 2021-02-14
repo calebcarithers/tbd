@@ -1,5 +1,5 @@
 from flask import request, jsonify, render_template
-from flask_rest import app
+from flask_rest import app, logger, random_word
 from flask_rest.models import Clicks
 from random_word import RandomWords
 import uuid
@@ -57,7 +57,9 @@ def initial():
 
 @app.route("/position/test", methods=["GET", "POST"])
 def pos_test():
-    # return jsonify({"success": True})
+    # we getting rate limited here
+    # r = random_word.get_random_word()
+    # logger.info(f"random word: {r}")
     if request.method == "POST":
         x_pos = request.json.get("x_pos", None)
         y_pos = request.json.get("y_pos", None)
@@ -65,10 +67,12 @@ def pos_test():
         if x_pos is None or y_pos is None:
             return jsonify({"success": False, "message": "You must post an x and y pos"}), 400
         else:
-            click = Clicks.create(
+            Clicks.create(
                 id = uuid.uuid4(),
                 x_pos = x_pos,
                 y_pos = y_pos,
                 image_url = "test.com"
             )
             return jsonify({"success": True}), 200
+    elif request.method == "GET":
+        return jsonify({"success": "great"})
