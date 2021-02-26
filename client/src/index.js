@@ -17,14 +17,14 @@ document.addEventListener("click", function (e) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({x_pos: x, y_pos: y})
-    })
-        .then(res => {
-            console.log("res", res)
+        }).then(res => res.json())
+        .then(json => {
+            console.log("res", json)
             makeImage(
                 ctx,
                 x,
                 y,
-                "https://whyy.org/wp-content/uploads/2019/08/bigstock-Rubber-Stamp-And-Word-Fake-Pri-272426671.jpg",
+                json.url,
             )
         })
         .catch(e => console.log("error", e))

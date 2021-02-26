@@ -24,4 +24,5 @@ def pos_test():
             )
             return jsonify({"url": url}), 200
     elif request.method == "GET":
-        return jsonify({"success": "great"})
+        urls = []
+        return jsonify({"urls": urls})
