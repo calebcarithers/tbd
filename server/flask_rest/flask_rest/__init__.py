@@ -1,12 +1,11 @@
 from flask import Flask
 from peewee import *
-from google_images_search import GoogleImagesSearch
 import os
 from flask import request
-from random_word import RandomWords
-
 
 app = Flask(__name__, template_folder="/Users/imey/Desktop/tbd/client/")
+logger = app.logger
+
 # add necessary headers for cors shit
 @app.after_request
 def cors(response):
@@ -17,9 +16,6 @@ def cors(response):
         if headers:
             response.headers['Access-Control-Allow-Headers'] = headers
     return response
-
-# params: Developer API KEY and then Search Engine ID or GCS_CX
-gis = GoogleImagesSearch(os.environ["GIS_API_KEY"], os.environ["GIS_CX"])
 
 db = PostgresqlDatabase(
     database=os.environ["POSTGRES_DB"],
@@ -35,7 +31,4 @@ def before_request_handler():
 def after_request_handler():
     db.close()
 
-logger = app.logger
-
-random_word = RandomWords()
 import flask_rest.routes
