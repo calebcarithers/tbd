@@ -20,13 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ad49f65-a698-4b3a-9df8-facb22ab8ec5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/makeImage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/flask_rest/flask_rest/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/flask_rest/flask_rest/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/makeImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/makeImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/flask_rest/flask_rest/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/flask_rest/flask_rest/routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +73,9 @@
       <workItem from="1611884922295" duration="4696000" />
       <workItem from="1611928215058" duration="353000" />
       <workItem from="1612920785580" duration="197000" />
-      <workItem from="1613271891583" duration="4168000" />
+      <workItem from="1613271891583" duration="4235000" />
+      <workItem from="1613349815409" duration="10000" />
+      <workItem from="1614378306283" duration="3147000" />
     </task>
     <servers />
   </component>
