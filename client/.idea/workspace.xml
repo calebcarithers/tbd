@@ -8,6 +8,11 @@
       </path>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feat" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
       <path>
@@ -20,11 +25,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ad49f65-a698-4b3a-9df8-facb22ab8ec5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../server/flask_rest/flask_rest/my_json_encoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/flask_rest/flask_rest/random_word.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/makeImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/makeImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/flask_rest/flask_rest/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/flask_rest/flask_rest/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/flask_rest/flask_rest/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/flask_rest/flask_rest/routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +43,29 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1614384114" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feat/new_stuff" />
+                    <option name="lastUsedInstant" value="1614383722" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/.." />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectId" id="1mtbtCChh8oMQ6ijBhs5lkp0lnz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -75,7 +104,7 @@
       <workItem from="1612920785580" duration="197000" />
       <workItem from="1613271891583" duration="4235000" />
       <workItem from="1613349815409" duration="10000" />
-      <workItem from="1614378306283" duration="3147000" />
+      <workItem from="1614378306283" duration="6217000" />
     </task>
     <servers />
   </component>

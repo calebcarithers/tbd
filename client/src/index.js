@@ -7,6 +7,17 @@ console.log("canvas", canvas);
 
 if (canvas.getContext) {
     var ctx = canvas.getContext("2d")
+    fetch("http://localhost:5000/position/test", {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => res.json())
+        .then(json => {
+            console.log("JSON", json)
+            json.forEach(img => makeImage(ctx, img.x_pos, img.y_pos, img.url))
+            // json.urls.forEach(url => makeImage(ctx,))
+        })
 }
 
 document.addEventListener("click", function (e) {
