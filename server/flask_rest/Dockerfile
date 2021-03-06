@@ -8,5 +8,6 @@ RUN apk add jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-de
 # some other stuff needed
 RUN apk add --no-cache gcc musl-dev linux-headers
 COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt 
 
+ 
