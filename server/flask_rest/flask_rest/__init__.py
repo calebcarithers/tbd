@@ -2,8 +2,10 @@ from flask import Flask
 from peewee import *
 import os
 from flask import request
+from flask_rest.my_json_encoder import my_json_encoder
 
 app = Flask(__name__, template_folder="/Users/imey/Desktop/tbd/client/")
+app.json_encoder = my_json_encoder
 logger = app.logger
 
 # add necessary headers for cors shit

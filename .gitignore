@@ -1,9 +1,10 @@
 .idea/
-.DS_Store
+.DS_STORE
 
 client/.idea
 client/node_modules
 client/dist
+client/.idea/workspace.xml
 
 server/.idea
 __pycache__/
